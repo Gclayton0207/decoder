@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="./imagens/iconecesar.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CESAR && B64 DECODER</title>
+</head>
+
+<body>
+    <header>
+        <h1>CESAR && B64 DECODER</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="topo">
+                <div class="selectCriptografia">
+                    <p class="criptografia">Escolha a criptografia:</p>
+                    <p class="rotacaop">Escolha a rotação:</p>
+                    <div class="escolhaCriptografia">
+                        <select class="select" name="codificadores" onchange="escolhaCriptografia()">
+                            <option value="nulo"></option>
+                            <option value="Cesar" class="Cesar">Cifra de Cesar</option>
+                            <option value="base64" class="base64">Base 64</option>
+                        </select>
+                        <input type="text" class="rotacao" onchange="validarRotacao()" />
+                    </div>
+                </div>
+
+                <div class="radioEscolha">
+                    <label for="codificar"><input type="radio" id="codificar" class="codificar" name="codigo"
+                            value="Codificar" onchange="botaoCriptografar()" />
+                        Codificar</label>
+                    <label for="descodificar"><input type="radio" id="descodificar" class="descodificar" name="codigo"
+                            value="Descodificar" onchange="botaoDescriptografar()" />
+                        Decodificar</label>
+                </div>
+            </section>
+
+            <section class="AreaTexto">
+                <div class="textAreaResultado">
+                    <label for="mensagemRecebida">
+                        <p class="mensagem">Digite sua mensagem:</p>
+                    </label>
+                    <textarea name="mensagemRecebida" class="receber" cols="30" rows="10"></textarea>
+                    <textarea name="mensagemRecebida" class="resultado" cols="30" rows="10" disabled></textarea>
+                </div>
+            </section>
+            <div class="botao">
+                <button type="submit" onclick="cripto()">
+                    <p class="textButton">Codificar</p>
+                </button>
+            </div>
+
+            <div class="btnLimpa">
+                <button><a href="./index.html">Limpar dados</a></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="rodape">&copy; Desenvolvido por Giovanni Clayton - 2022</p>
+        <div class="redes">
+            <a href="https://github.com/Gclayton0207" target="_blank"><img src="./imagens/github.png" /></a>
+            <a href="https://www.linkedin.com/in/giovanni-clayton" target="_blank">
+                <img src="./imagens/linkedin.png" /></a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./cesar.js"></script>
+    <script src="./base64.js"></script>
+</body>
+
+</html>
