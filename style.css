@@ -115,9 +115,7 @@ textarea {
   color: white;
   padding: 10px;
 }
-a {
-  text-decoration: none;
-}
+
 
 .botao {
   display: flex;
@@ -142,6 +140,7 @@ button {
   cursor: pointer;
   background: black;
   outline: none;
+  cursor: pointer;
 }
 
 button:hover {

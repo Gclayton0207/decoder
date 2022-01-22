@@ -34,3 +34,7 @@ function botaoDescriptografar() {
     TextButton.textContent = 'Decodificar';
     
 }
+
+function recarregar() {
+    return (location = "./index.html");
+  }
